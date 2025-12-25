@@ -31,4 +31,5 @@ gem "debug"
 
 group :development do
   gem "ruby-lsp-rspec", require: false
+  gem "minitest"
 end

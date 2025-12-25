@@ -1,0 +1,3 @@
+require 'rails/generators/rails/app/app_generator'
+puts ARGV[0]
+Rails::Generators::AppGenerator.new([ARGV[0]], {skip_bundle: true, no_rc:true, force: true}).invoke_all
