@@ -35,7 +35,7 @@ Outside of the `rails dumpcar:dump` and `rails dumpcar:restore` commands, don't 
 - Support other Rails databases (MySQL and SQLite)
 - Support other Rails environments than the current one
 - Ability to clean your db/dumps directory of all dumps before a given time
-- Add support for naming a dump (you can manually do this now but not via the rake task)
+- Add support for naming a dump (you can manually do this now but not via the Rails command task)
 - Restoring a specific dump via filepath
 - Restoring a specific dump by timestamp
 - Restoring a specific dump by name
