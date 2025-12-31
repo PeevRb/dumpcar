@@ -3,7 +3,7 @@ module Dumpcar
     require "active_model"
     include ActiveModel::Model
 
-    attr_accessor :connection, :location, :pg, :base_dir
+    attr_accessor :connection, :location, :pg, :base_dir, :description
     def initialize(attributes = {})
       cleanup_arguments(attributes)
       @connection = Dumpcar::Util.get_connection_db_config
@@ -12,7 +12,7 @@ module Dumpcar
     end
 
     def dump
-      @pg.dump(@location.next)
+      @pg.dump(@location.next(description))
     end
 
     def restore
