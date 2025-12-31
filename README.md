@@ -1,6 +1,6 @@
 # Dumpcar
 
-[![Ruby Gem version](https://badge.fury.io/rb/dumpcar.svg)](https://rubygems.org/gems/dumpcar) [![Ruby build](https://github.com/wwahammy/dumpcar/actions/workflows/main.yml/badge.svg)](https://github.com/wwahammy/dumpcar/actions/workflows/main.yml)
+[![Ruby Gem version](https://badge.fury.io/rb/dumpcar.svg)](https://rubygems.org/gems/dumpcar) [![Ruby build](https://github.com/PeevRb/dumpcar/actions/workflows/main.yml/badge.svg)](https://github.com/PeevRb/dumpcar/actions/workflows/main.yml)
 
 Rails commands for dumping and restoring the contents of the PostgreSQL database for your Rails application.
 
@@ -35,7 +35,7 @@ Outside of the `rails dumpcar:dump` and `rails dumpcar:restore` commands, don't 
 - Support other Rails databases (MySQL and SQLite)
 - Support other Rails environments than the current one
 - Ability to clean your db/dumps directory of all dumps before a given time
-- Add support for naming a dump (you can manually do this now but not via the rake task)
+- Add support for naming a dump (you can manually do this now but not via the Rails command task)
 - Restoring a specific dump via filepath
 - Restoring a specific dump by timestamp
 - Restoring a specific dump by name
@@ -51,15 +51,15 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/wwahammy/dumpcar. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/wwahammy/dumpcar/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/PeevRb/dumpcar. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/PeevRb/dumpcar/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
-The gem is available as open source under the terms of the [LGPL-3.0-or-later license](https://github.com/wwahammy/dumpcar/blob/main/LICENSE).
+The gem is available as open source under the terms of the [LGPL-3.0-or-later license](https://github.com/PeevRb/dumpcar/blob/main/LICENSE).
 
 ## Code of Conduct
 
-Everyone interacting in the Dumpcar project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/wwahammy/dumpcar/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Dumpcar project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/PeevRb/dumpcar/blob/main/CODE_OF_CONDUCT.md).
 
 ## Releasing
 
