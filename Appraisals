@@ -5,7 +5,7 @@
   end
 end
 
-[7.1, 7.2, 8.0].each do |ver|
+[7.1, 7.2, 8.0, 8.1].each do |ver|
   appraise "rails-#{ver}" do
     gem "rails", "~> #{ver}.0"
   end
