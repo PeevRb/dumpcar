@@ -44,6 +44,29 @@ RSpec.describe "Console", type: :aruba, pending: pending_rails_version? ? "This 
         expect(base_dir.children.count).to eq 1
       end
     end
+
+    context "with passed name" do
+      [
+        "--description",
+        "--desc"
+      ].each do |arg|
+        it "generates a dump name properly and can round trip with '#{arg}'" do
+          description = "This is a  VALID Description"
+
+          SimpleObject.create(name: "so-1")
+          run_command(rails_command("dumpcar:dump #{arg}='#{description}'"))
+          expect(last_command_started).to be_successfully_executed
+          SimpleObject.delete_all
+
+          expect(SimpleObject).to be_none
+
+          expect(working_dir.pathname.children.last.basename.to_s).to be_end_with "-this-is-a-valid-description.dump"
+          run_command(rails_command("dumpcar:load"))
+
+          expect(SimpleObject.count).to eq 1
+        end
+      end
+    end
   end
 
   describe ":restore" do

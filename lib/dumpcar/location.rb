@@ -28,9 +28,9 @@ module Dumpcar
       dumps.last
     end
 
-    def next
+    def next(description = nil)
       prepare_base_dir!
-      base_dir.join(from_time + ".dump").to_s
+      base_dir.join(generate_file_name(description)).to_s
     end
 
     def from_time(time = Time.now.utc)
@@ -41,6 +41,13 @@ module Dumpcar
 
     def prepare_base_dir!
       FileUtils.mkdir_p base_dir
+    end
+
+    def generate_file_name(description)
+      [
+        from_time,
+        description ? Dumpcar::Util.calculate_dump_description(description) : nil
+      ].reject(&:nil?).join("-") + ".dump"
     end
   end
 end
