@@ -9,6 +9,7 @@ on:
   merge_group:
     types:
       - checks_requested
+  workflow_dispatch:
 
 jobs:
   build:
