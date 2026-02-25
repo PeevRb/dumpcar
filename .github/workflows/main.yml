@@ -51,6 +51,8 @@ jobs:
             rails: 6.1
           - ruby: head
             rails: 7.0
+          - ruby: 3.2
+            rails: edge
 
     permissions:
       contents: read
