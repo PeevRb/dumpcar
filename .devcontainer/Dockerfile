@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/ruby:1-3.2-bullseye
+FROM mcr.microsoft.com/devcontainers/ruby:3.2
 
 RUN su vscode -c "/usr/local/rvm/bin/rvm fix-permissions"
 
