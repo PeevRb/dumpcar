@@ -4,6 +4,6 @@ module Dumpcar::Util
   end
 
   def self.logger
-    Rails.logger
+    MultiLogger.new(Rails.logger, Logger.new($stdout))
   end
 end
