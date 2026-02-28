@@ -27,7 +27,8 @@
           "Ruby LSP RSpec": {
             "rspecCommand": "rspec -f d"
           }
-        }
+        },
+        "rubyLsp.formatter": "standard"
       },
       "extensions": ["redhat.vscode-yaml"]
     }
