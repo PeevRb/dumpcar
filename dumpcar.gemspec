@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "rails", ">= 6"
   spec.add_dependency "terrapin", ">= 1"
+  spec.add_dependency "multi_logger" # used for outputting to both the Rails log and console
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
