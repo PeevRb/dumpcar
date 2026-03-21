@@ -7,7 +7,8 @@ vulnerability reports for the current major version.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.x     | :white_check_mark: |
+| 0.x     | :x:                |
+| 1.x     | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
