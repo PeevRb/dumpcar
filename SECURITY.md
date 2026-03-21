@@ -11,7 +11,7 @@ vulnerability reports for the current major version.
 
 ## Reporting a Vulnerability
 
-To report a vulnerability, please visit https://github.com/wwahammy/dumpcar/security to report a vulnerability.
+To report a vulnerability, please visit https://github.com/peevrb/dumpcar/security to report a vulnerability.
 Vulnerability reports will addressed when we have time. Please follow the
-[dumpcar Code of Conduct](https://github.com/wwahammy/dumpcar/blob/main/CODE_OF_CONDUCT.md)
+[dumpcar Code of Conduct](https://github.com/peevrb/dumpcar/blob/main/CODE_OF_CONDUCT.md)
 at all times.
