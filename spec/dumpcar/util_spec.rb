@@ -16,19 +16,36 @@ RSpec.describe Dumpcar::Util do
   end
 
   describe ".logger" do
-    it "is writing to stdout" do
+    around do |example|
       original_stdout = $stdout
+      original_rails_logger = Rails.logger
+
       begin
         # override $stdout so we can read it
         $stdout = StringIO.new("", "w")
-
-        Dumpcar::Util.logger.fatal("LOUD NOISES!!!")
-
-        expect($stdout.string).to include("LOUD NOISES!!!")
+        example.run
       ensure
         # we're resetting to the original stdout
         $stdout = original_stdout
+        # we're resetting to the Rails.logger
+        Rails.logger = original_rails_logger
       end
+    end
+
+    it "is writing to stdout" do
+      Dumpcar::Util.logger.fatal("LOUD NOISES!!!")
+
+      expect($stdout.string).to include("LOUD NOISES!!!")
+    end
+
+    it "is writing to Rails.logger" do
+      test_strio = StringIO.new("", "w")
+      # override Rails.logger so we can read its IO
+      Rails.logger = Logger.new(test_strio)
+
+      Dumpcar::Util.logger.fatal("LOUD NOISES!!!")
+
+      expect(test_strio.string).to include("LOUD NOISES!!!")
     end
   end
 end
