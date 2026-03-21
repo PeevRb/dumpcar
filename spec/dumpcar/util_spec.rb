@@ -6,10 +6,12 @@ RSpec.describe Dumpcar::Util do
       expect(described_class.logger_class).to eq Dumpcar::Util::BroadcastLogger
     end
 
-    it "returns ActiveSupport::BroadcastLogger on Rails 7.1" do
-      expect(Rails).to receive(:version).and_return "7.1"
+    if Rails.version >= "7.1" # you can't test for ActiveSupport::BroadcastLogger if we're not on Rails 7.1
+      it "returns ActiveSupport::BroadcastLogger on Rails 7.1" do
+        expect(Rails).to receive(:version).and_return "7.1"
 
-      expect(described_class.logger_class).to eq ActiveSupport::BroadcastLogger
+        expect(described_class.logger_class).to eq ActiveSupport::BroadcastLogger
+      end
     end
   end
 end
