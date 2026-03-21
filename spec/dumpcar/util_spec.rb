@@ -14,4 +14,21 @@ RSpec.describe Dumpcar::Util do
       end
     end
   end
+
+  describe ".logger" do
+    it "is writing to stdout" do
+      original_stdout = $stdout
+      begin
+        # override $stdout so we can read it
+        $stdout = StringIO.new("", "w")
+
+        Dumpcar::Util.logger.fatal("LOUD NOISES!!!")
+
+        expect($stdout.string).to include("LOUD NOISES!!!")
+      ensure
+        # we're resetting to the original stdout
+        $stdout = original_stdout
+      end
+    end
+  end
 end
