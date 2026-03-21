@@ -5,7 +5,7 @@ module Dumpcar::Util
 
   def self.logger_class
     if Rails.version < "7.1"
-      # We only load this if we needed it
+      # We only load this if we need it
       require "dumpcar/util/broadcast_logger"
       Dumpcar::Util::BroadcastLogger
     else
