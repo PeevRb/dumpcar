@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Commands for dumping and restoring Rails PostgreSQL database contents"
   # spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "https://github.com/wwahammy/dumpcar"
+  spec.homepage = "https://github.com/peevrb/dumpcar"
   spec.license = "LGPL-3.0-or-later"
   spec.required_ruby_version = ">= 3.2.0"
 
