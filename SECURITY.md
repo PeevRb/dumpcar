@@ -1,6 +1,6 @@
 # Security Policy
 
-dumpcar is provided as-is and is in very early stages. That said, we accept
+dumpcar is provided as-is. That said, we accept
 vulnerability reports for the current major version.
 
 ## Supported Versions
