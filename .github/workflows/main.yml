@@ -81,6 +81,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Set up Ruby ${{ matrix.ruby }} for Rails ${{ matrix.rails }}
         uses: ruby/setup-ruby@c4e5b1316158f92e3d49443a9d58b31d25ac0f8f # v1.306.0
         with:
@@ -97,6 +99,8 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Build and run dev container task
         uses: devcontainers/ci@b63b30de439b47a52267f241112c5b453b673db5 #v0.3.1900000449
         with:
