@@ -9,6 +9,8 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -19,7 +21,11 @@ updates:
           - major
           - minor
           - patch
+    cooldown:
+      default-days: 7
   - package-ecosystem: devcontainers
     directory: "/"
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
