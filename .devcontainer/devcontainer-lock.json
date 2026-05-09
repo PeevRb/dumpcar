@@ -1,0 +1,19 @@
+{
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "1.1.0",
+      "resolved": "ghcr.io/devcontainers/features/github-cli@sha256:d22f50b70ed75339b4eed1ba9ecde3a1791f90e88d37936517e3bace0bbad671",
+      "integrity": "sha256:d22f50b70ed75339b4eed1ba9ecde3a1791f90e88d37936517e3bace0bbad671"
+    },
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "2.0.0",
+      "resolved": "ghcr.io/devcontainers/features/node@sha256:fedd4c11f7adfb64283b578dddc7da906728daa25fa293351c9d913231acf12f",
+      "integrity": "sha256:fedd4c11f7adfb64283b578dddc7da906728daa25fa293351c9d913231acf12f"
+    },
+    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {
+      "version": "1.0.3",
+      "resolved": "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence@sha256:757843d75915f140ec22bc16ccb5e657a910d9b1d1f445d15350a78e584d130f",
+      "integrity": "sha256:757843d75915f140ec22bc16ccb5e657a910d9b1d1f445d15350a78e584d130f"
+    }
+  }
+}
