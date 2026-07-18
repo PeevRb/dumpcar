@@ -57,6 +57,7 @@ jobs:
 
     permissions:
       contents: read
+      code-quality: write
 
     services:
       # Label used to access the service container
