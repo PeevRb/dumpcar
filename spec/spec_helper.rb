@@ -2,6 +2,16 @@
 
 require "bundler"
 
+require "simplecov"
+
+if ENV["CI"]
+  require "simplecov-cobertura"
+
+  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+end
+
+SimpleCov.start
+
 Bundler.require :default, :development
 
 Combustion.initialize! :active_record

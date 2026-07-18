@@ -29,6 +29,10 @@ gem "appraisal2"
 
 gem "debug"
 
+gem "simplecov", require: false
+
+gem "simplecov-cobertura", require: false
+
 group :development do
   gem "ruby-lsp-rspec", require: false
 end
