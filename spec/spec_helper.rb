@@ -2,6 +2,8 @@
 
 require "bundler"
 
+Bundler.require :default, :development
+
 require "simplecov"
 
 if ENV["CI"]
@@ -11,8 +13,6 @@ if ENV["CI"]
 end
 
 SimpleCov.start
-
-Bundler.require :default, :development
 
 Combustion.initialize! :active_record
 
