@@ -11,6 +11,12 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 7
+    groups:
+      github-action-updates:
+        update-types:
+          - major
+          - minor
+          - patch
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
