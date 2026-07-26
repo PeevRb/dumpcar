@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     concurrency:
-      group: build-${{ github.head_ref || github.run_id }}-ruby-${{matrix.ruby }}-rails-${{ matrix.rails }}
+      group: build-${{ github.head_ref || github.ref }}-ruby-${{ matrix.ruby }}-rails-${{ matrix.rails }}
       cancel-in-progress: true
     runs-on: ubuntu-latest
     name: Ruby ${{ matrix.ruby }}, Rails ${{ matrix.rails }}
@@ -108,6 +108,9 @@ jobs:
     name: Validate Devcontainer
     permissions:
       contents: read
+    concurrency:
+      group: validate-dev-container-${{ github.head_ref || github.ref }}
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
