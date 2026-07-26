@@ -17,10 +17,10 @@ Gemfile.lock
 # Appraisal files to ignore
 /gemfiles/*.lock
 /gemfiles/.bundle
+/gemfiles/vendor
 
 # used by ruby-lsp
 /.ruby-lsp
 
 # built vendor/bundler files
 /vendor/bundle
-
