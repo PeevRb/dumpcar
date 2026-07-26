@@ -18,7 +18,7 @@ module Dumpcar::Util
     end
 
     def configuration_hash
-      @db_config.respond_to?(:connection_db_config) ? @db_config.configuration_hash : @db_config
+      @db_config.respond_to?(:connection_hash) ? @db_config.configuration_hash : @db_config
     end
 
     def self.create
