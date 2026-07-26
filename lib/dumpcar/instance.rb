@@ -6,7 +6,7 @@ module Dumpcar
     attr_accessor :connection, :location, :pg, :base_dir
     def initialize(attributes = {})
       cleanup_arguments(attributes)
-      @connection = Dumpcar::Util.get_connection_db_config
+      @connection = Dumpcar::Util::DatabaseConfiguration.create.configuration_hash
       @location = Location.new(base_dir)
       @pg = Pg.new(connection)
     end
