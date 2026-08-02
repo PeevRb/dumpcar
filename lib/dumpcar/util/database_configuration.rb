@@ -10,10 +10,10 @@ module Dumpcar::Util
       case @db_config
       in Hash
         :unknown
+      in ActiveRecord::DatabaseConfigurations::UrlConfig
+        :url
       in ActiveRecord::DatabaseConfigurations::HashConfig
         :hash
-      in ActiveRecord::DatabaseConfiguration::UrlConfig
-        :url
       end
     end
 
