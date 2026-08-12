@@ -2,6 +2,7 @@ require "dumpcar/version"
 require "dumpcar/location"
 require "dumpcar/pg"
 require "dumpcar/util"
+require "dumpcar/util/database_configuration"
 require "dumpcar/instance"
 require "dumpcar/railtie" if defined?(Rails)
 
