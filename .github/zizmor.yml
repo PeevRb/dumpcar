@@ -1,0 +1,3 @@
+rules:
+  unpinned-uses:
+    disable: true # we use actions lock so we don't need this.
