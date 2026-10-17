@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ruby-rails-postgres
 {
-  "name": "Ruby on Rails & Postgres",
+  "name": "Dumpcar",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
@@ -9,8 +9,10 @@
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/node:2": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "extensions": ["github/gh-actions-lock", "github/gh-stack"]
+    },
+    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {}
     "ghcr.io/rails/devcontainer/features/bundler-cache:1": {}
   },
 
