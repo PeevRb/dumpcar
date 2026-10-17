@@ -84,11 +84,11 @@ jobs:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/rails_${{ matrix.rails }}.gemfile
 
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       - name: Set up Ruby ${{ matrix.ruby }} for Rails ${{ matrix.rails }}
-        uses: ruby/setup-ruby@a0102e0972be65f351c307e2d64b9314a57c8073 # v1.324.0
+        uses: ruby/setup-ruby@v1.324.0
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
@@ -98,7 +98,7 @@ jobs:
           DB_HOST: localhost
       - name: Upload coverage report
         if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-        uses: actions/upload-code-coverage@d8e329117199404bba6fc81efe8093dc7c015e34 # v1.4.2
+        uses: actions/upload-code-coverage@v1.4.2
         with:
           file: coverage/coverage.xml
           language: ruby
@@ -112,10 +112,10 @@ jobs:
       group: validate-dev-container-${{ github.head_ref || github.ref }}
       cancel-in-progress: true
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       - name: Build and run dev container task
-        uses: devcontainers/ci@513af61f4de4f75d37e4438f184ba4358f0fc1ca #v0.3.1900000450
+        uses: devcontainers/ci@v0.3.1900000450
         with:
           runCmd: bin/rake spec # run the specs
