@@ -12,7 +12,8 @@
     "ghcr.io/devcontainers/features/github-cli:1": {
       "extensions": ["github/gh-actions-lock", "github/gh-stack"]
     },
-    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {}
+    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
+    "ghcr.io/rails/devcontainer/features/bundler-cache:1": {}
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
