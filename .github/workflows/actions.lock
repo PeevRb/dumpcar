@@ -5,21 +5,21 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/code-scanning.yml':
         - 'actions/checkout@v7.0.1'
-        - 'github/codeql-action@v4.38.1'
-        - 'ruby/setup-ruby@v1.324.0'
+        - 'github/codeql-action@v4.38.3'
+        - 'ruby/setup-ruby@v1.329.0'
         - 'zizmorcore/zizmor-action@v0.6.4'
     '.github/workflows/main.yml':
         - 'actions/checkout@v7.0.1'
-        - 'actions/upload-code-coverage@v1.4.2'
+        - 'actions/upload-code-coverage@v1.4.4'
         - 'devcontainers/ci@v0.3.1900000450'
-        - 'ruby/setup-ruby@v1.324.0'
+        - 'ruby/setup-ruby@v1.329.0'
     '.github/workflows/prettier.yml':
         - 'actions/checkout@v7.0.1'
-        - 'actions/setup-node@v7.0.0'
+        - 'actions/setup-node@v7.1.0'
         - 'creyd/prettier_action@v4.6'
     '.github/workflows/release.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ruby/setup-ruby@v1.324.0'
+        - 'ruby/setup-ruby@v1.329.0'
         - 'rubygems/release-gem@v1.4.1'
 dependencies:
     'actions/checkout@v7.0.1':
@@ -27,14 +27,14 @@ dependencies:
         commit: 'sha1-3d3c42e5aac5ba805825da76410c181273ba90b1'
         owner_id: 44036562
         repo_id: 197814629
-    'actions/setup-node@v7.0.0':
-        ref: 'v7.0.0'
-        commit: 'sha1-820762786026740c76f36085b0efc47a31fe5020'
+    'actions/setup-node@v7.1.0':
+        ref: 'v7.1.0'
+        commit: 'sha1-949feb2413d6458794dcd2491c4babbbce0c15c1'
         owner_id: 44036562
         repo_id: 189476904
-    'actions/upload-code-coverage@v1.4.2':
-        ref: 'v1.4.2'
-        commit: 'sha1-d8e329117199404bba6fc81efe8093dc7c015e34'
+    'actions/upload-code-coverage@v1.4.4':
+        ref: 'v1.4.4'
+        commit: 'sha1-2b21a77928be8d5168c2b9581a67f2adbebacc52'
         owner_id: 44036562
         repo_id: 1220171870
     'creyd/prettier_action@v4.6':
@@ -52,14 +52,14 @@ dependencies:
         commit: 'sha1-cdf488f595d80d6e07e03d4674febd5ab45fa938'
         owner_id: 9919
         repo_id: 259445878
-    'github/codeql-action@v4.38.1':
-        ref: 'v4.38.1'
-        commit: 'sha1-1c5b675653bb5c22dbe9b12b556ec555138e09fd'
+    'github/codeql-action@v4.38.3':
+        ref: 'v4.38.3'
+        commit: 'sha1-24c54180a607b1449ed407dd24f251e4e9147c8d'
         owner_id: 9919
         repo_id: 259445878
-    'ruby/setup-ruby@v1.324.0':
-        ref: 'v1.324.0'
-        commit: 'sha1-a0102e0972be65f351c307e2d64b9314a57c8073'
+    'ruby/setup-ruby@v1.329.0':
+        ref: 'v1.329.0'
+        commit: 'sha1-651ff0d62c5c79bed6d53ec518387aae20e72c1a'
         owner_id: 210414
         repo_id: 231208785
     'rubygems/configure-rubygems-credentials@dc5a8d8553e6ee01fc26761a49e99e733d17954a':
