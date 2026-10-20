@@ -14,6 +14,11 @@
       "version": "1.0.4",
       "resolved": "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence@sha256:b9c4ad752999277d80f13d2d7a19117b209b5bc6fb1848eac781523fb994c553",
       "integrity": "sha256:b9c4ad752999277d80f13d2d7a19117b209b5bc6fb1848eac781523fb994c553"
+    },
+    "ghcr.io/rails/devcontainer/features/bundler-cache:1": {
+      "version": "1.0.1",
+      "resolved": "ghcr.io/rails/devcontainer/features/bundler-cache@sha256:a86f0bcae6473bdc4df43bf68fc57c2ce42e88790d32fed2e1c10aee1d11581b",
+      "integrity": "sha256:a86f0bcae6473bdc4df43bf68fc57c2ce42e88790d32fed2e1c10aee1d11581b"
     }
   }
 }
