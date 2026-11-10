@@ -2,6 +2,9 @@
 
 module Dumpcar::Util
   class DatabaseConfiguration
+    # the db_config passed in
+    attr_reader :db_config
+
     def initialize(db_config)
       @db_config = db_config
     end

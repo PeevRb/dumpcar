@@ -25,6 +25,23 @@ RSpec.shared_context "db_config from url config" do
 end
 
 RSpec.describe Dumpcar::Util::DatabaseConfiguration do
+  describe "#db_config" do
+    context "db_config from hash" do
+      include_context "db_config from hash"
+      it { is_expected.to have_attributes(db_config:) }
+    end
+
+    context "db_config from hash config" do
+      include_context "db_config from hash config"
+      it { is_expected.to have_attributes(db_config:) }
+    end
+
+    context "db_config from url config" do
+      include_context "db_config from url config"
+      it { is_expected.to have_attributes(db_config:) }
+    end
+  end
+
   describe "#connection_type" do
     context "db_config from hash" do
       include_context "db_config from hash"
