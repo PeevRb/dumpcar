@@ -1,13 +1,13 @@
 RSpec.describe Dumpcar::Pg do
   describe ":dump" do
     it "does not crash" do
-      pg = described_class.new(Dumpcar::Util.get_connection_db_config)
+      pg = described_class.new(Dumpcar::Util::DatabaseConfiguration.create.configuration_hash)
 
       pg.dump(Rails.root.join("tmp/#{Random.uuid}.dump").to_s)
     end
 
     it "properly dumps and restores an item" do
-      pg = described_class.new(Dumpcar::Util.get_connection_db_config)
+      pg = described_class.new(Dumpcar::Util::DatabaseConfiguration.create.configuration_hash)
 
       expect(SimpleObject.count).to eq 0
       SimpleObject.create(name: "so-1")
@@ -27,13 +27,13 @@ RSpec.describe Dumpcar::Pg do
 
   describe ":restore" do
     it "does not crash" do
-      pg = described_class.new(Dumpcar::Util.get_connection_db_config)
+      pg = described_class.new(Dumpcar::Util::DatabaseConfiguration.create.configuration_hash)
 
       expect { pg.restore(Dumpcar::Location.new(Rails.root.join("db/dumps")).last) }.to_not raise_error
     end
 
     it "properly restores an item" do
-      pg = described_class.new(Dumpcar::Util.get_connection_db_config)
+      pg = described_class.new(Dumpcar::Util::DatabaseConfiguration.create.configuration_hash)
 
       expect(SimpleObject.count).to eq 0
       pg.restore(Dumpcar::Location.new(Rails.root.join("db/dumps")).last)
