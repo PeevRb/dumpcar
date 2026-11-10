@@ -48,14 +48,16 @@ RSpec.describe Dumpcar::Util::DatabaseConfiguration do
       it { is_expected.to have_attributes(configuration_hash: an_instance_of(Hash)) }
     end
 
-    context "db_config from hash config" do
-      include_context "db_config from hash config"
-      it { is_expected.to have_attributes(configuration_hash: an_instance_of(Hash)) }
-    end
+    context "only work on Rails.version >= 6.1", skip: Rails.version < "6.1" do
+      context "db_config from hash config" do
+        include_context "db_config from hash config"
+        it { is_expected.to have_attributes(configuration_hash: an_instance_of(Hash)) }
+      end
 
-    context "db_config from url config" do
-      include_context "db_config from url config"
-      it { is_expected.to have_attributes(configuration_hash: an_instance_of(Hash)) }
+      context "db_config from url config" do
+        include_context "db_config from url config"
+        it { is_expected.to have_attributes(configuration_hash: an_instance_of(Hash)) }
+      end
     end
   end
 end
