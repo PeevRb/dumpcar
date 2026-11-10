@@ -77,4 +77,14 @@ RSpec.describe Dumpcar::Util::DatabaseConfiguration do
       end
     end
   end
+
+  describe ".get_base_connection_db_config" do
+    it "matches ActiveRecord::Base.connection_db_config on Rails > 6", skip: Rails.version < "6.1" do
+      expect(Dumpcar::Util::DatabaseConfiguration.get_base_connection_db_config).to eq ActiveRecord::Base.connection_db_config
+    end
+
+    it "matches ActiveRecord::Base.connection_config on Rails 6", skip: Rails.version >= "6.1" do
+      expect(Dumpcar::Util::DatabaseConfiguration.get_base_connection_db_config).to eq ActiveRecord::Base.connection_config
+    end
+  end
 end
